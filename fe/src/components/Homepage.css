@@ -1,0 +1,161 @@
+/* Homepage.css */
+
+.maincont {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .table-container {
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px 0;
+    
+    color: white;
+  }
+  
+  .navbar-container a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .search-input, .filter-select, .sort-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-input {
+    position: relative;
+    top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+/* Homepage.css */
+
+
+    /* Homepage.css */
+
+/* ... existing styles ... */
+
+/* Homepage.css */
+
+/* ... existing styles ... */
+
+.add-book-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    bottom: 75px;
+    margin-left: auto; /* Adjust the position of the add book button */
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* ... existing styles ... */
+
+  
+  /* Adjust the position of the add book button */
+  .add-book-button {
+    margin-left: auto;
+  }
+  /* Homepage.css */
+
+/* ... existing styles ... */
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-book-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  bottom: 75px;
+  right: 100px;
+  margin-right: 10px; /* Add some margin between buttons */
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  
+}
+
+/* ... existing styles ... */
