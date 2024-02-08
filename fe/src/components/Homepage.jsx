@@ -71,6 +71,7 @@ const Homepage = () => {
 const handlelogout=()=>{
   localStorage.removeItem('user')
   localStorage.clear()
+  window.location='./login'
 }
   // Function to handle edit operation (not implemented)
   const handleClickEdit = (id) => {
@@ -83,7 +84,7 @@ const handlelogout=()=>{
     if (token) {
       getData();
     }
-  }, [sortBy, filterBy, token,handlelogout]);
+  }, [sortBy, filterBy, token,title]);
   
 
   // JSX structure
