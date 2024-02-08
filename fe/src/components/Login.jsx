@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [phone, setPhone] = useState('');
+  // const [phone, setPhone] = useState('');
 
   const handleLogin = async(e) => {
     e.preventDefault();
     const formData={
-        email,password,phone
+        email,password
     }
     try {
         const response = await fetch('https://englishquestapi.onrender.com/auth/login', {
@@ -47,9 +47,7 @@ const Login = () => {
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <br />
-        <label>Phone:</label>
-        <input type="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-        <br />
+      
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <br />
