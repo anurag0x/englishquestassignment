@@ -6,24 +6,17 @@ import './AddBookForm.css';
 import { useParams } from 'react-router-dom';
 
 const Editbook = () => {
+  const [book, setBook] = useState({});
   const [formData, setFormData] = useState({
-    title: '',
-    category: '',
-    content: '',
+    title: book.title,
+    category: book.category,
+    content: book.content,
   });
 
   const { id: bookid } = useParams();
-  const [book, setBook] = useState({});
   const token = localStorage.getItem('token');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+  
    const  getBook = async () => {
     try {
       const response = await fetch(`https://englishquestapi.onrender.com/book/${bookid}`, {
@@ -35,6 +28,11 @@ const Editbook = () => {
 
       const data = await response.json();
       setBook(data.book);
+      setFormData({
+        title: data.book.title || '',
+        category: data.book.category || '',
+        content: data.book.content || '',
+      });
     } catch (error) {
       console.log(error);
     }
@@ -61,10 +59,12 @@ const Editbook = () => {
     }
   };
 
-  useEffect(() => {
-    getBook();
-  }, [bookid]); // Only use bookid in the dependency array if it's needed for fetching the book details
+useEffect(()=>{
+  getBook()
+ 
 
+},[setFormData])
+  
   return (
     <div className="add-book-form-container">
       <Navbar />
@@ -76,8 +76,8 @@ const Editbook = () => {
             type="text"
             id="title"
             name="title"
-            value={formData.title||book.title} // Use formData or fallback to book details
-            onChange={handleChange}
+            value={formData.title} 
+            onChange={(e)=>setFormData({...formData,title:e.target.value})}
             required
           />
         </div>
@@ -86,8 +86,8 @@ const Editbook = () => {
           <select
             id="category"
             name="category"
-            value={formData.category||book.category } // Use formData or fallback to book details
-            onChange={handleChange}
+            value={formData.category } 
+            onChange={(e)=>setFormData({...formData,category:e.target.value})}
             required
           >
             <option value="">Select Category</option>
@@ -102,8 +102,8 @@ const Editbook = () => {
           <textarea
             id="content"
             name="content"
-            value={formData.content||book.content } // Use formData or fallback to book details
-            onChange={handleChange}
+            value={formData.content } 
+            onChange={(e)=>setFormData({...formData,content:e.target.value})}
             required
           />
         </div>
